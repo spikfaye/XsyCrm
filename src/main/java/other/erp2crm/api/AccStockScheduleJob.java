@@ -1,7 +1,6 @@
 package other.erp2crm.api;
 
 import com.rkhd.platform.sdk.ScheduleJob;
-import com.rkhd.platform.sdk.exception.ApiEntityServiceException;
 import com.rkhd.platform.sdk.exception.AsyncTaskException;
 import com.rkhd.platform.sdk.log.Logger;
 import com.rkhd.platform.sdk.log.LoggerFactory;
