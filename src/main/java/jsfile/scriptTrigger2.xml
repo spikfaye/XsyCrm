@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+    <config>
+        <trigger>
+
+            <object>account</object>
+            <!-- Options: add / update / delete-->
+            <operate>add</operate>
+            <!-- Options: before / after-->
+            <position>after</position>
+            <order>1</order>
+            <!-- Caution: match case / spell / full path-->
+            <class>other.organization.account.addaccount</class>
+        </trigger>
+
+        <trigger>
+
+            <object>account</object>
+            <!-- Options: add / update / delete-->
+            <operate>update</operate>
+            <!-- Options: before / after-->
+            <position>after</position>
+            <order>1</order>
+            <!-- Caution: match case / spell / full path-->
+            <class>other.organization.account.updateaccount</class>
+        </trigger>
+
+
+    </config>
+</configs>

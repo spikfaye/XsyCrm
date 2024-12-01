@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configs> 
+  <config>
+    <!--定时器的写法-->
+    <schedule> 
+      <class>other.erp2crm.api.AccStockScheduleJob</class>
+    </schedule>
+
+
+    <schedule>
+      <class>other.erp2crm.api.deliReScheduleJob</class>
+    </schedule>
+
+
+    <!--触发器的额外扩展-->
+    <ruleevent>
+      <object>order</object>
+      <class>other.erp2crm.api.OrderRuleEventImpl</class>
+    </ruleevent>
+
+    <!--审批流流程-->
+    <approvalevent>
+      <object>order</object>
+      <operate>complete</operate>
+      <position>after</position>
+      <class>other.erp2crm.api.OrderAgreeAfterEvent</class>
+    </approvalevent>
+
+
+    <!--传统触发器-->
+    <trigger>
+      <object>paymentApplication</object>
+      <!-- Options: add / update / delete-->
+      <operate>update</operate>
+      <!-- Options: before / after-->
+      <position>after</position>
+      <order>1</order>
+      <!-- Caution: match case / spell / full path-->
+      <class>other.erp2crm.api.updatapayment</class>
+    </trigger>
+
+
+    <trigger>
+      <object>account</object>
+      <!-- Options: add / update / delete-->
+      <operate>add</operate>
+      <!-- Options: before / after-->
+      <position>after</position>
+      <order>1</order>
+      <!-- Caution: match case / spell / full path-->
+      <class>other.erp2crm.api.addyblaccountTrigger</class>
+    </trigger>
+
+
+  </config> 
+</configs>
